@@ -169,7 +169,7 @@ function SignIn() {
                     </button>
                 </form>
             </div>
-            <p className={style.link}>if you dont't have account <Link href='signUp'><a>Sign Up</a></Link></p>
+            <p className={style.link}>{`if you don't have account`} <Link href='signUp'><a>Sign Up</a></Link></p>
         </div>
     )
 }

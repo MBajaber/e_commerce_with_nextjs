@@ -31,7 +31,7 @@ function Sidebar({getClass}) {
                             <div className='img'>
                                 {
                                     user.photoURL === null
-                                    ? <AiOutlineUser size size={24} />
+                                    ? <AiOutlineUser size={24} />
                                     : <Image src={user.photoURL} alt='person' height={35} width={35} className='rounded_image' />
                                 }
                             </div>

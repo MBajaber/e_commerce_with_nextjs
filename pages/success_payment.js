@@ -9,7 +9,7 @@ function SuccessPage() {
                 <div className={style.image}>
                     <Image src='/correct.png' alt="correct sign" width={80} height={80} />
                 </div>
-                <p className={style.text}>Thank you, you'r order has been confirmed!</p>
+                <p className={style.text}>{`Thank you, you'r order has been confirmed!`}</p>
             </div>
             <div className={style.go_main}>
                 <Link href='/' ><a>go to Main</a></Link>

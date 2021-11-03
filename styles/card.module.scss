@@ -1,0 +1,45 @@
+@import "variables.scss";
+
+.card {
+  padding: 60px 0;
+  .products_container .no_items_cart {
+    text-align: center;
+    border: 1px solid $border-color-light-gray-color;
+    padding: 20px;
+    border-radius: 4px;
+    color: $gray-color;
+    align-items: center;
+    justify-content: center;
+    svg {
+      margin-left: 10px;
+    }
+  }
+  .total {
+    font-weight: 900;
+    font-size: 1.2rem;
+    margin-top: 15px;
+  }
+  .checkout {
+    margin-top: 40px;
+    button,
+    a {
+      background-color: $green-color;
+      display: block;
+      width: 100%;
+      padding: 0.5rem 1rem;
+      font-size: 1.25rem;
+      line-height: 1.5;
+      border-radius: 0.3rem;
+      color: $white-color;
+      cursor: pointer;
+      font-weight: 400;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      border: 1px solid transparent;
+    }
+  }
+}

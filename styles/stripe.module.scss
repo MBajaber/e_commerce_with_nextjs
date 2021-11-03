@@ -1,0 +1,47 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+.stripe_page {
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    max-width: 520px;
+    .msg {
+        @include flexs(false, center);
+        flex-wrap: wrap;
+        .image {
+            margin: auto;
+        }
+        .text {
+            color: $text-title-color;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    }
+    .go_main {
+        margin-top: 20px;
+        a {
+            text-transform: capitalize;
+            font-weight: bold;
+            background-color: $green-color;
+            display: block;
+            width: 100%;
+            padding: 0.5rem 1rem;
+            font-size: 1.25rem;
+            line-height: 1.5;
+            border-radius: 0.3rem;
+            color: $white-color;
+            cursor: pointer;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            border: 1px solid transparent;
+        }
+    }
+}

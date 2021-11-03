@@ -1,0 +1,129 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+.navbar {
+  background-color: $dark-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  color: $white-color;
+  padding: 10px 15px;
+  @include flexs(center, center);
+  z-index: 3;
+  .sections {
+    height: 100%;
+    width: 100%;
+
+    form {
+      overflow: hidden;
+      height: 100%;
+      border-radius: 8px;
+      @include flexs(center, center);
+      input {
+        width: 80%;
+        height: 100%;
+        padding: 0 10px;
+        color: $gray-color;
+        border: 0;
+        font-size: 0.9rem;
+        transition: all 0.3s ease-in-out;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        max-width: 400px;
+        &:focus {
+          outline: 0;
+        }
+      }
+      & > button {
+        width: 20%;
+        height: 100%;
+        background-color: $yellow-color;
+        color: $white-color;
+        border: 0;
+        cursor: pointer;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        max-width: 80px;
+        svg {
+          font-size: 1.2rem;
+        }
+      }
+    }
+    .nav_section {
+      @include flexs(space-between, center);
+      .search {
+        flex-grow: 1;
+        margin-left: 2%;
+        margin-right: 2%;
+        height: 35px;
+        display: none;
+        @media (min-width: 450px) {
+          display: block;
+        }
+      }
+      .icon_cart {
+        @include flexs(false, center);
+        .user_name {
+          font-size: 14px;
+          margin-right: 10px;
+          display: none;
+          @media (min-width: 450px) {
+            display: block;
+          }
+        }
+        .shopping_cart {
+          margin-right: 18px;
+          position: relative;
+          cursor: pointer;
+          color: $white-color;
+          svg {
+            font-size: 1.5rem;
+          }
+          .counter {
+            position: absolute;
+            top: 8px;
+            left: 13px;
+            background-color: $red-color;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            @include flexs(center, center);
+            span {
+              font-size: 10px;
+              font-weight: bold;
+              color: $white-color;
+            }
+          }
+        }
+        .navbar_icon {
+          width: 50px;
+          height: 36px;
+          border: 1px solid $gray-color;
+          @include flexs(center, center);
+          padding: 3px 5px;
+          border-radius: 4px;
+          user-select: none;
+          cursor: pointer;
+          svg {
+            user-select: none;
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+    .search_sm {
+      @include flexs(center, center);
+      height: 35px;
+      width: 100%;
+      margin-top: 8px;
+      @media (min-width: 450px) {
+        display: none;
+      }
+      form {
+        width: 100%;
+      }
+    }
+  }
+}

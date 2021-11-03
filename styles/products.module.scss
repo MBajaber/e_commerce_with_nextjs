@@ -1,0 +1,49 @@
+@import "variables.scss";
+
+.products {
+  margin: auto;
+  margin: 20px auto;
+  z-index: 4;
+  .full_image {
+    grid-column: 1 / -1;
+    img {
+      max-width: 100%;
+    }
+  }
+  @media (min-width: 576px) {
+    margin: -110px auto;
+  }
+  @media (min-width: 768px) {
+    margin: -155px auto;
+    .products .small_product {
+      grid-column: 1 / span 2;
+    }
+  }
+  @media (min-width: 992px) {
+    margin: -225px auto;
+  }
+  @media (min-width: 1200px) {
+    margin: -250px auto;
+  }
+  .boxes {
+    display: grid;
+    grid-gap: 10px;
+    grid-auto-flow: row dense;
+    @media (min-width: 320px) {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+  }
+  .no_items {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
+    padding: 30px 20px;
+    border-radius: 10px;
+    background-color: $white-color;
+    height: 100%;
+    animation: showUp 0.3s ease-in-out;
+    text-align: center;
+    font-weight: bold;
+    color: $gray-color;
+  }
+}

@@ -1,0 +1,9 @@
+@mixin flexs($j: false, $i: false) {
+  display: flex;
+  @if ($j) {
+    justify-content: $j;
+  }
+  @if ($i) {
+    align-items: $i;
+  }
+}

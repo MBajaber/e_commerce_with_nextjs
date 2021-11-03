@@ -1,0 +1,28 @@
+@import 'variables.scss';
+
+.not_find {
+    margin: 60px auto;
+    .img {
+        width: 85%;
+        max-width: 600px;
+        height: 300px;
+        margin: auto;
+        text-align: center;
+        position: relative;
+        @media (max-width: 500px) {
+            height: 200px;
+        }
+    }
+    .text {
+        margin-top: 20px;
+        text-transform: capitalize;
+        text-align: center;
+        font-family: "Reggae One", cursive;
+        font-weight: bold;
+        color: $dark-color;
+        font-size: 2rem;
+        @media (min-width: 500px) {
+            font-size: 4rem;
+        }
+    }
+}

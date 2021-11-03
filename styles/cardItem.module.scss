@@ -1,0 +1,106 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+.cardItem {
+  padding: 30px 0;
+  border-bottom: 1px solid $border-color-light-gray-color;
+  max-width: 650px;
+  margin: auto;
+  .title_section {
+    margin-top: 15px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: $gray-color;
+    text-transform: capitalize;
+  }
+  .info_desc {
+    @media (min-width: 400px) {
+      @include flexs();
+    }
+    .img {
+      text-align: center;
+      @media (min-width: 400px) {
+        width: 100px;
+        margin: unset;
+        margin-right: 20px;
+      }
+    }
+    .title_category {
+      margin-top: 20px;
+      @media (min-width: 400px) {
+        margin-top: unset;
+      }
+      h2 {
+        font-size: 1.2rem;
+        color: $text-title-color;
+      }
+      p {
+        font-size: 0.9rem;
+        color: $text-paragraph-color;
+        margin-top: 10px;
+      }
+    }
+  }
+  .details {
+    @include flexs(space-between);
+    flex-wrap: wrap;
+    margin-top: 15px;
+    .quantity_size {
+      @include flexs(space-between);
+      flex-basis: 200px;
+      @media (max-width: 400px) {
+        margin-right: 110px;
+      }
+      .buttons {
+        @include flexs();
+        .increase,
+        .counter,
+        .decrease {
+          @include flexs(center, center);
+          width: 40px;
+          height: 40px;
+          background-color: transparent;
+          border: 1px solid $border-color-light-gray-color;
+        }
+        .increase,
+        .decrease {
+          cursor: pointer;
+          font-size: 1.1rem;
+          &:active {
+            border: 1px solid $green-color;
+          }
+        }
+        .increase {
+          background-color: $text-title-color;
+          color: $white-color;
+        }
+      }
+      .size select {
+        border: 1px solid $border-color-light-gray-color;
+        padding: 10px;
+        &:active {
+          border: 1px solid $green-color;
+        }
+        &::outline {
+          border: 1px solid $green-color;
+        }
+      }
+    }
+    .currency p {
+      font-weight: bold;
+      color: $black-color;
+    }
+    .details .delete {
+      text-align: center;
+    }
+    button {
+      border: 0;
+      background-color: transparent;
+      svg {
+        font-size: 30px;
+        color: $red-color;
+        cursor: pointer;
+      }
+    }
+  }
+}

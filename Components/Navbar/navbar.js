@@ -28,7 +28,7 @@ function Navigation() {
     }
     
     const user = useSelector(state => state.user.user)
-    const getClassHandler = (classValue) => {
+    const getClass = (classValue) => {
         if(classValue.includes('close_btn') || classValue.includes('sidebar')) {
             dispatch(navToggle(false));
         }
@@ -36,7 +36,7 @@ function Navigation() {
 
     return (
         <nav className='nav'>
-            {toggleNav && <Sidebar getClassHandler={getClass} />}
+            {toggleNav && <Sidebar getClass={getClass} />}
             <div className={style.navbar}>
                 <div className={style.sections}>
                     <div className={style.nav_section}>
